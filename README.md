@@ -78,7 +78,7 @@ Checkout [Open TW LLM Leaderboard](https://huggingface.co/spaces/yentinglin/open
 
 | Model                                                                            | [TMLU](https://arxiv.org/pdf/2403.20180) | Taiwan Truthful QA | [Legal Eval](https://huggingface.co/datasets/lianghsun/tw-legal-benchmark-v1) |  [TW MT-Bench](https://huggingface.co/datasets/MediaTek-Research/TCEval-v2) | Long context | Function Calling | [TMMLU+](https://github.com/iKala/ievals) | 
 |---------------------------------------------------------------------------------|--------------|---------------|--------------------|--------------|--------------|-----------------|-----------| 
-|      | 學科知識 | 台灣在地化測試 | 台灣法律考題 |  中文多輪對答 | 長文本支援 | 函數呼叫 |  | 
+|      | 學科知識 | 台灣在地化測試 | 台灣法律考題 |  中文多輪對答 | 長文本支援 | 函式呼叫 |  | 
 | [**yentinglin/Llama-3-Taiwan-70B-Instruct**](https://huggingface.co/yentinglin/Llama-3-Taiwan-70B-Instruct)     | **74.76%**       |     80.95%          |      68.42%              |      7.54        |    [128k version](https://huggingface.co/yentinglin/Llama-3-Taiwan-70B-Instruct-128k)          |        ✅         |     67.53%      |
 | [**yentinglin/Llama-3-Taiwan-70B-Instruct-DPO**](https://huggingface.co/yentinglin/Llama-3-Taiwan-70B-Instruct-DPO)     | 74.60%       |     **81.75%**          |      **70.33%**              |      -       |    -   |        ✅         | - |
 | [**yentinglin/Llama-3-Taiwan-70B-Instruct-128k**](https://huggingface.co/yentinglin/Llama-3-Taiwan-70B-Instruct-128k)     | 73.01%       |     80.16%          |      63.64%              |   -    |   -  |        ✅         |  -  |
@@ -122,7 +122,7 @@ To run the evaluation, use the [script](https://github.com/adamlin120/needle-hay
 - Median Score: 9.0
 - Standard Deviation: 3.0349783771882133
 - Total Number of Scores: 160
-- [Model resopnse](https://huggingface.co/yentinglin/Llama-3-Taiwan-70B-Instruct-rc1/blob/main/Llama-3-Taiwan.jsonl)
+- [Model response](https://huggingface.co/yentinglin/Llama-3-Taiwan-70B-Instruct-rc1/blob/main/Llama-3-Taiwan.jsonl)
 - [GPT-4 Eval](https://huggingface.co/yentinglin/Llama-3-Taiwan-70B-Instruct-rc1/blob/main/gpt-4_single.jsonl)
 - [Code fork from `mtkresearch/TCEval` with bug fixing](https://github.com/adamlin120/TCEval)
 
@@ -173,7 +173,7 @@ Assistant: 根據天氣預報，明天台大天氣為陣雨。低溫 24°C。10 
 </details>
 
 <details>
-<summary>3. 格式化輸出, 語言理解, 實體識別, 函數調用</summary>
+<summary>3. 格式化輸出, 語言理解, 實體識別, 函式呼叫</summary>
 
 If you are interested in function-calling, I strongly recommend [using constrained decoding](https://huggingface.co/docs/text-generation-inference/basic_tutorials/using_guidance) to turn on `json mode`.
 
@@ -323,3 +323,12 @@ The Taiwan LLM Initiative was started by Yenting Lin (林彥廷) in July 2023.
 - Version 2.0 was released in October 2023, sponsored by Ubitus K.K.
 
 These models are designed to support Traditional Mandarin and are optimized for Taiwanese culture and related applications. For more detailed information about our models, including demos, features, and examples, please visit our [Hugging Face collection](https://huggingface.co/collections/yentinglin/taiwan-llm-6523f5a2d6ca498dc3810f07).
+
+
+# Disclaimer
+
+This model is provided “as‑is” and without warranties of any kind. Users are solely responsible for evaluating the accuracy and suitability of the outputs. The developers assume no liability for any direct or indirect damages arising from its use.  
+The model is strictly not intended for high‑risk applications such as medical diagnosis, legal advice, or financial investment. For such use cases, please consult qualified professionals.
+
+本模型「如是」（as‑is）提供，使用者須自行評估結果之正確性與適用性。開發者對於使用本模型所引發之任何直接或間接損失，不承擔任何法律責任。  
+嚴禁用於醫療診斷、法律諮詢、金融投資等高風險場景；若有相關需求，請尋求專業人員協助。
